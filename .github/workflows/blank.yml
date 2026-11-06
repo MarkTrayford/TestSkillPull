@@ -44,7 +44,7 @@ jobs:
       - name: Copy skills into project
         run: |
           mkdir -p .cursor
-          cp -R TestActionSkills/.cursor .cursor
+          cp -R TestActionSkills/.cursor/. .cursor/
 
       - name: Commit updated rules
         if: github.event_name != 'pull_request'
