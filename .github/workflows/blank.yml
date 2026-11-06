@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  copyRules:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     permissions:
@@ -43,8 +43,8 @@ jobs:
 
       - name: Copy skills into project
         run: |
-          mkdir -p .cursor/rules
-          cp -R TestActionSkills/.cursor/rules .cursor/rules
+          mkdir -p .cursor
+          cp -R TestActionSkills/.cursor .cursor
 
       - name: Commit updated rules
         if: github.event_name != 'pull_request'
