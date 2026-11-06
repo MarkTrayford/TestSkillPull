@@ -42,4 +42,4 @@ jobs:
       - name: Copy skills into project
         run: |
           mkdir -p .cursor/skills
-          cp -R skills/* .cursor/skills/
+          cp -R .cursor .cursor
