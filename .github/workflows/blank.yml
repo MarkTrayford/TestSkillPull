@@ -34,3 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Clone skills repository
+        run: |
+          git clone https://github.com/MarkTrayford/TestActionSkills
+
+      - name: Copy skills into project
+        run: |
+          mkdir -p .cursor/skills
+          cp -R skills/* .cursor/skills/
